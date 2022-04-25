@@ -1,1 +1,1 @@
-export * from './ConfigurationRetrievalResponseDTO';
+export * from './ConfigurationRetrievedResponseDTO';
