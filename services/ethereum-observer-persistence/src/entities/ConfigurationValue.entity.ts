@@ -8,9 +8,9 @@ export type ConfigurationValueMetadata = {
 };
 
 @Entity(CONFIGURATION_VALUE_TABLE)
-export class ConfigurationValue {
+export class ConfigurationValueEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
   @Column({ name: 'name', type: 'varchar', unique: true })
   name: string;
 
