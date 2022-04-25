@@ -11,7 +11,7 @@ export type ConfigurationValueMetadata = {
 export class ConfigurationValue {
   @PrimaryGeneratedColumn()
   id: number;
-  @Column({ name: 'name', type: 'varchar' })
+  @Column({ name: 'name', type: 'varchar', unique: true })
   name: string;
 
   @Column({ type: 'json' })

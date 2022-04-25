@@ -1,5 +1,5 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { ConfigurationValue } from '../entities';
+import { ConfigurationValue, EthereumTransaction } from '../entities';
 import { ConfigSourceFactory } from './config/ConfigSourceFactory';
 
 export class TypeOrmModuleFactory {
@@ -25,7 +25,7 @@ export class TypeOrmModuleFactory {
       password,
       database,
       logging: false,
-      entities: [ConfigurationValue],
+      entities: [ConfigurationValue, EthereumTransaction],
       migrations: [customMigrationsLocation],
       synchronize: false,
       migrationsRun: false,
